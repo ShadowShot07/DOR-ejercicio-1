@@ -14,8 +14,9 @@
 <body>
     <div class="body">
         <div class="header">
-
+            <img src="files/edaac9d9349343d9b745c87c85e7feb6.png" id="logo" alt="">
             <header>
+
                 <h1>Audiovisual Services for video Production in Europe</h1>
 
             </header>
@@ -36,7 +37,17 @@
             </nav>
 
         </div>
+        <section>
+            <div class="wrapper">
 
+                <video src="files/asteroide.mp4" id="slide1" autoplay muted></video>
+                <video src="files/cascada.mp4" id="slide2" autoplay muted></video>
+                <video src="files/spa.mp4" id="slide3" autoplay muted></video>
+
+
+
+            </div>
+        </section>
         <div class="container">
 
             <div class="aside">
@@ -55,6 +66,19 @@
             </div>
 
             <div class="sections">
+                
+                <section>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repudiandae doloremque deleniti
+                    maxime placeat ea officiis quia aut corrupti? Possimus, deleniti? Earum sequi quisquam enim libero
+                    tempore? Dignissimos, sint maiores.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim massa vel mattis suscipit.
+                    Maecenas non ante ornare, laoreet risus id, blandit leo. Nam vitae purus nec magna egestas porta
+                    consequat non velit. Nam fermentum porta elit at imperdiet. Duis interdum velit viverra nisl
+                    eleifend hendrerit. Fusce egestas sit amet ante mattis finibus. Praesent vel diam condimentum leo
+                    ullamcorper congue eu sed arcu. Sed eget justo in metus vulputate eleifend vitae sit amet tortor.
+                    Cras auctor faucibus odio ornare tincidunt. Nullam consectetur pretium placerat. Etiam lobortis
+                    iaculis eleifend. Etiam porta tempor magna, eu volutpat ligula tempor non. Ut elit tortor, bibendum
+                    at nisi sit amet, condimentum volutpat ipsum. Vestibulum porttitor pharetra venenatis.                </section>
 
                 <section>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto repudiandae doloremque deleniti
@@ -70,16 +94,6 @@
                     at nisi sit amet, condimentum volutpat ipsum. Vestibulum porttitor pharetra venenatis.
                 </section>
 
-                <section>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla dignissim massa vel mattis suscipit.
-                    Maecenas non ante ornare, laoreet risus id, blandit leo. Nam vitae purus nec magna egestas porta
-                    consequat non velit. Nam fermentum porta elit at imperdiet. Duis interdum velit viverra nisl
-                    eleifend hendrerit. Fusce egestas sit amet ante mattis finibus. Praesent vel diam condimentum leo
-                    ullamcorper congue eu sed arcu. Sed eget justo in metus vulputate eleifend vitae sit amet tortor.
-                    Cras auctor faucibus odio ornare tincidunt. Nullam consectetur pretium placerat. Etiam lobortis
-                    iaculis eleifend. Etiam porta tempor magna, eu volutpat ligula tempor non. Ut elit tortor, bibendum
-                    at nisi sit amet, condimentum volutpat ipsum. Vestibulum porttitor pharetra venenatis.
-                </section>
 
             </div>
         </div>
@@ -123,5 +137,25 @@
 
     </div>
 </body>
+<script>
+    var slide1 = document.getElementById('slide1');
+    var slide2 = document.getElementById('slide2');
+    var slide3 = document.getElementById('slide3');
 
+    slide1.onended = function (){
+        slide2.play();
+        slide1.style.opacity=0;
+        slide2.style.opacity=1;
+    }
+    slide2.onended = function (){
+        slide3.play();
+        slide2.style.opacity=0;
+        slide3.style.opacity=1;
+    }
+    slide3.onended = function (){
+        slide1.play();
+        slide3.style.opacity=0;
+        slide1.style.opacity=1;
+    }
+</script>
 </html>
